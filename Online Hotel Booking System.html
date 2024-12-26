@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang = "en-in" dir = "ltr">
+<head>
+<link href = "govind dev ji.jpg" rel = "icon" type = "text/img"/>
+<title>Online Hotel Booking System</title>
+<meta charset = "utf-8"/>
+<meta name = "title" content = "Online Hotel Booking System"/>
+<meta name = "description" content = "This website helps to book your dream hotel for your trip."/>
+<meta name = "keywords" content = "Online Hotel Booking System, hotel"/>
+<meta name = "author" content = "Koustubh Sharma"/>
+<meta name = "viewport" content = "width = device-width, initial-scale = 1.0, user-scalable = no"/>
+<script language = "javascript" type = "text/javascript">
+
+	function home()
+	{
+		window.alert("You Are On Home Page");
+		return false;
+	}
+	
+	
+	function button_check()
+	{
+		var a = window.document.forms["myForm"];
+		var returnval;
+		
+		if(a.elements["adult"].value <= 0 || a.elements["adult"].value >= 10)
+		{
+			window.alert("Please Select A valid No.");
+			returnval = false;
+			a.elements["adult"].focus();
+			a.elements["adult"].select();
+		}
+	
+	return returnval;
+	}
+	
+</script>
+<style type = "text/css">
+
+
+body{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+
+.front{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+}
+.front1{
+	height: 650px;
+	width: 1300px;
+	background-size: cover;
+	background-image: url("images.jpeg");
+	box-shadow: 0px 0px 15px black;
+	position: absolute;
+	background-color: white;
+	transition: 5s;
+	animation: change 20s infinite ease-in-out;
+}
+@keyframes change {
+	0% {
+		background-image: url(Las_Vegas.jpg);
+	}
+	20% {
+		background-image: url(Las_Vegas1.jpg);
+	}
+	40% {
+		background-image: url(Paris_effil.jpg);
+	}
+	60% {
+		background-image: url(Las_Vegas.jpg);
+	}
+	80% {
+		background-image: url(images.jpeg);
+	}
+	100% {
+		background-image: url(Las_Vegas1.jpg);
+	}
+}
+.head > article > p{
+	font-family: tahoma;
+	font-size: 30px;
+	color: white;
+}
+.head{
+	position: relative;
+	top: 40px;
+	left: 20px;
+}
+
+.button{
+	position: relative;
+	top: 350px;
+	left:20px;
+}
+.button > a{
+	text-decoration: none;
+	font-family: tahoma;
+	font-size: 20px;
+	margin-left: 30px;
+}
+	
+.link1{
+	padding: 17px;
+	background-color: white;
+	color: black;
+	border-radius: 4px;
+}
+.button > a:hover{
+	background-color: black;
+	color: white;
+}
+
+.link2{
+	color: black;
+	padding: 17px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.p2{
+	font-size: 20px;
+}
+.nav{
+	display: flex;
+	background-color: black;
+	justify-content: space-between;
+	flex-direction: row;
+	padding: 9px;
+	position: sticky;
+	top: 0px;
+	z-index: 3;
+}
+.nav > ul{
+	margin: 0px;
+	list-style-type: none;
+	padding: 0px;
+}
+.nav > ul >li{
+	display: inline-block;
+	padding: 10px;
+}
+.nav > ul > li > a{
+	text-decoration: none;
+	color: white;
+	font-family: tahoma;
+	padding: 18px;
+}
+.get_button > a{
+	text-decoration: none;
+	color: white;
+	padding: 18px;
+	background-color: limegreen;
+	font-family: tahoma;
+}
+
+.footer{
+	display: flex;
+	justify-content: center;
+	background-color: rgba(0,0,0,0.15);
+}
+.footer > article > h1{
+	font-family: tahoma;
+}
+.footer > article > p{
+	font-family: tahoma;
+	text-align: center;
+}
+.nav1{
+	background-color: rgba(0, 0, 0, .5);
+	position: absolute;
+	left: 980px;
+	padding: 25px;
+	top: 100px;
+	height: 350px;
+	width: 200px;
+	border-radius: 4px;
+	border-color: white;
+}
+
+.nav1 > form > label{
+	margin-top: 18px;
+	font-family: Century Gothic;
+	font-weight: lighter;
+	color: white;
+	margin-top: 18px;
+}
+.nav1 > form > input {
+	outline: none;
+	text-align: center;
+	font-family: Century Gothic;
+}
+.submit_btn{
+	margin-top: 20px;
+	width: 190px;
+	font-family: Century Gothic;
+	font-size: 17px;
+	background-color: limegreen;
+	border-style: none;
+	padding: 16px;
+}
+.nav > ul > li > a:hover{
+	background-color: white;
+	color: black;
+}
+.home_page{
+	border-bottom: solid thin white;
+}
+
+
+/* Media queries */
+
+
+@media (max-width: 412px){
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	
+	
+	
+	.front1{
+		display: block;
+		height: 912px;
+		width: 412;
+		background-size: cover;
+		background-image: url();
+	}
+	
+	.nav{
+		background-color: red;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		padding: 9px;
+	}
+	.nav > ul{
+		margin: 0px;
+		list-style-type: none;
+		padding: 0px;
+	}
+	.nav > ul >li{
+		display: inline-block;
+		padding: 10px;
+	}
+	.nav > ul > li > a{
+		text-decoration: none;
+		color: black;
+		font-family: tahoma;
+		padding: 18px;
+	}
+}
+</style>
+<body>
+	<div class = "front">
+		<div class = "front1" id = "background-img">
+			<div class = "nav">
+				<ul>
+					<li><a class = "home_page" href = "#" name = "home" onclick = "return home()" target = "_blank">HOME</a></li>
+					<li><a href = "#" name = "book a hotel" target = "_blank">BOOK A HOTEL</a></li>
+					<li><a href = "#" name = "about us" target = "_blank">ABOUT US</a></li>
+					<li><a href = "#" name = "contact" target = "_blank">CONTACT</a></li>
+				</ul>
+				<div class = "get_button">
+					<a href = "#" class = "get" target = "_blank" name = "get_room">Get A ROOM</a>
+				</div>
+			</div>
+			<div class = "head">
+				<article>
+					<p class = "head">Book A Hotel Now And Get Upto 25% Discount.<br/><kk class = "p2">For better experience Create Account with us.</kk></p>
+				</article>
+			</div>
+			<div class = "button">
+				<a href = "#" name = "Create" class = "link1" title = "Book Your Trip" target = "_blank">Book A Trip</a>
+				<a href = "file:///C:/Users/Koustubh%20Sharma/Desktop/B.C.A%20Project/create%20account.html" class = "link2" name = "Create" title = "Create Your Resume" target = "_blank">Create Account With Us</a>
+			</div>
+			<div class = "nav1">
+			<form method = "post" name = "myForm" action = "ReciveForm1.asp">
+				<label>CHECK IN</label></br/>
+				<input style = "width: 180px;" type = "date" required = "required" name = "check_in" title = "fill the check-in date"/><br/><br/>
+				
+				<label>CHECK OUT</label><br/>
+				<input type = "date" style = "width: 180px;" required = "required" name = "check_out" title = "fill the check-out date"/><br/><br/>
+				
+				<label>ADULT</label><br/>
+				<input type = "number" style = "width: 180px;" required = "required" name = "adult" placeholder = "How many adult's" title = "How many adult's"/><br/><br/>
+				
+				<label>ROOM CATEGORY</label><br/>
+				<select style = "width: 180px;">
+					<option>General</option>
+					<option>Luxery</option>
+					<option>Super Luxery</option>
+					<option>Vip Rooms</option>
+				</select><br/><br/>
+				
+				<input class = "submit_btn" onclick = "return button_check()" type = "submit" value = "Check Avalbility" name = "sub"/>
+			</form>
+			</div>
+		</div>
+	</div>
+	<div class = "footer">
+		<article>
+			<h1>Hotel Rooms Report</h1><br/>
+			<p>About Hotel Reports</p>
+			<hr/>
+			<p>Our story<br/>
+			Home Page<br/>
+			Book a trip<br/>
+			</p>
+			<p>All Rights Reserved&copy;</p>
+		</article>
+	</div>
+</body>
+</html>
