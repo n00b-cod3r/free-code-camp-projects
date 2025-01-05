@@ -1,5 +1,3 @@
-/*			JAI SHREE RAM			*/
-
 
 //JavaScript Code
 	let i = 0	//Global Variables
