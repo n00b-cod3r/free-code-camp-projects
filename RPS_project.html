@@ -1,0 +1,142 @@
+<!--						Jai Shree Ram					-->
+<!doctype html>
+<html lang = "en-in" dir = "ltr">
+	<head>
+		<title>Rock Paper Scissor Game</title>
+		<link href = "govind dev ji.jpg" rel = "icon" type = "image/ico"/>
+		<link href = "./styles.css" rel = "stylesheet" type = "text/css"/>
+
+		<meta charset = "utf-8"/>
+		<meta name = "title" content = "Rock Paper Scissor Game"/>
+		<meta name = "description" content = "game of rock paper scissor game"/>
+		<meta name = "keywords" content = "kk, ss, bb"/>
+		<meta name = "author" content = "Koustubh Sharma"/>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+
+		<script language = "javascript" type = "text/javascript">
+
+			//JavaScript code here !!!
+
+		</script>
+
+	</head>
+	<body onload = "load()">
+		<section>
+			<div class = "heading">
+				<h1 id = "start-game">Let's Play Rock Paper Scissor</h1>
+			</div>
+			<div class = "container">
+				<div class = "player-chose" id = "player-box">
+					<p>Please select the player options.</p>
+					<div class = "player-option">
+					<select id = "chose-player-option" class = "options">
+						<option>Single Player</option>
+						<option>Multi Player</option>
+					</select>
+					<button id = "player-btn">&rarr;</button>
+					</div>
+				</div>
+				<div id = "rules">
+					<div id = "singlePlayer">
+						<h1>Single Player Rules</h1>
+						<ul>
+							<li>You will be playing against the computer.</li><br/>
+							<li>You can choose between Rock, Paper, and Scissors.</li><br/>
+							<li>The first one to three points wins.</li><br/>
+							<li>Here are the rules to getting a point in the game:</li><br/><br/>
+							<li>Rock beats Scissors<br/>Scissors beats Paper<br/>Paper beats Rock</li><br/><br/>
+							<li>If the player and computer choose the same option (Ex. Paper and Paper), then no one gets the point.</li>
+						</ul>
+						<div class = "rule-button">
+							<button id = "ruleBackSingle">&larr;</button>
+							<button id = "ruleForward">&rarr;</button>
+						</div>
+					</div>
+					<div id = "multiPlayer">
+						<h1>Multi Player Rules</h1>
+						<ul>
+							<li>You will be playing against another player.</li><br/>
+							<li>You and another player can choose between Rock, Paper, and Scissors.</li><br/>
+							<li>The first one to three points wins.</li><br/>
+							<li style = "text-decoration: underline; text-transform: uppercase;">When first player chosing it's decision,<br/> then second player don't look at the chosen decision by the first player.</li></br/>
+							<li>Here are the rules to getting a point in the game:</li><br/>
+							<li>Rock beats Scissors<br/>Scissors beats Paper<br/>Paper beats Rock</li><br/><br/>
+							<li>If the player 1 and player 2 choose the same option (Ex. Paper and Paper), then no one gets the point.</li>
+						</ul>
+						<div class = "rule-button">
+							<button id = "ruleBackMulti">&larr;</button>
+							<button id = "ruleForward2">&rarr;</button>
+						</div>
+					</div>
+				</div>
+				<div id = "single-player-interface">
+					<div id = "single-player-heading">
+						<h1>Player Score: <span id = "playerScore">0</span></h1>
+						<h1>Computer Score: <span id = "computerScore">0</span ></h1>
+					</div>
+					<div id = "single-player-content">
+						<h1>Choose an option: <span id = "chooseOption"></span></h1>
+						<div class = "single-btn" id = "single-btn">
+							<button id = "Rock">Rock</button>
+							<button id = "Paper">Paper</button>
+							<button id = "Scissor">Scissor</button>
+						</div><br/>
+						<h1>Computer Chosen: <span id = "computerChoosen"></span></h1>
+					</div>
+				</div>
+				<div id = "multi-player-interface">
+					<div id = "multi-container">
+						<h1>Player 1 Score: <span id = "player1Score">0</span></h1>
+						<h1>Player 2 Score: <span id = "player2Score">0</span></h1>
+					</div>
+					<div id = "player1-multi">
+						<h1>Player 1<br/><br/>Choose an Option:</h1><br/>
+						<div class = "options">
+							<button id = "p1_Rock">Rock</button>
+							<button id = "p1_Paper">Paper</button>
+							<button id = "p1_Scissor">Scissor</button>
+						</div>
+					</div>
+					<div id = "player2-multi">
+						<h1>Player 2<br/><br/>Choose an Option:</h1><br/>
+						<div class = "options">
+							<button id = "p2_Rock">Rock</button>
+							<button id = "p2_Paper">Paper</button>
+							<button id = "p2_Scissor">Scissor</button>
+						</div>
+					</div>
+				</div>
+				<div id = "single-player-result">
+					<div id = "computer-won">
+						<h1>OOP's You Lose The Game</h1>
+						<div class = "reset">
+							<button onclick = "reset()">Reset The Game</button>
+						</div>
+					</div>
+					<div id = "player-won">
+						<h1>Congratulations You Won The Game</h1>
+						<div class = "reset">
+							<button onclick = "reset()">Reset The Game</button>
+						</div>
+					</div>
+				</div>
+				<div id = "multi-player-result">
+					<div id = "multi-player1-result">
+						<h1>Player 1 Wins</h1>
+						<div class = "reset">
+							<button onclick = "reset()">Reset The Game</button>
+						</div>
+					</div>
+					<div id = "multi-player2-result">
+						<h1>Player 2 Wins</h1>
+						<div class = "reset">
+							<button onclick = "reset()">Reset The Game</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<script src = "./RPS.js" language = "javascript" type = "text/javascript">
+		</script>
+	</body>
+</html>

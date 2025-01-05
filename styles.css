@@ -1,0 +1,320 @@
+/*				jai shree ram				*/
+
+
+	* {
+		font-family: Century Gothic;
+		font-weight: lighter;
+	}
+
+	body {
+		z-index: 0;
+		margin: 0px;
+		padding: 0px;
+		transition: background-image 3s ease-in-out;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: center center;
+	}
+
+	.heading {
+		height: 120px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.heading > h1 {
+		padding: 20px 20px;
+		border-radius: 40px;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		transition: 0.3s;
+	}
+
+	.heading > h1:hover {
+		border-top-style: solid;
+		border-right-style: solid;
+		border-bottom-style: solid;
+		border-left-style: solid;
+		border-width: 1px;
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	.container {
+		height: 620px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.player-chose {
+		height: 250px;
+		width: 450px;
+		display: none;
+	}
+	
+	.player-chose > p {
+		text-align: center;
+		font-size: 26px;
+		color: white;
+	}
+
+	.player-option {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.player-option > select {
+		outline: none;
+		text-align: center;
+		padding: 14px;
+		border-radius: 15px;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		transition: 0.3s;
+	}
+
+	.player-option > select:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+	}
+
+	#player-btn {
+		padding: 14px;
+		border-radius: 100%;
+		font-size: 20px;
+		outline: none;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		border-style: none;
+		text-align: center;
+		transition: 0.3s;
+	}
+
+	#player-btn:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	#rules {
+		height: 500px;
+		width: 450px;
+		display: none;
+	}
+
+	#singlePlayer, #multiPlayer {
+		display: none;
+	}
+	
+	#singlePlayer > h1 {
+		margin: 0px;
+		text-align: center;
+		color: white;
+	}
+
+	#singlePlayer > ul {
+		padding: 16px;
+		color: white;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	.rule-button {
+		margin: 0px;
+		height: 70px;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	#ruleBackSingle, #ruleForward, #ruleBackMulti, #ruleForward2 {
+		padding: 14px;
+		border-radius: 100%;
+		font-size: 20px;
+		outline: none;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: white;
+		border-style: none;
+		text-align: center;
+		transition: 0.3s;
+	}
+
+	#ruleBackSingle:hover, #ruleForward:hover, #ruleBackMulti:hover, #ruleForward2:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	#multiPlayer > h1 {
+		margin: 0px;
+		text-align: center;
+		color: white;
+	}
+
+	#multiPlayer > ul {
+		padding: 16px;
+		color: white;
+		list-style-type: none;
+		text-align: center;
+	}
+
+	#single-player-interface {
+		height: 550px;
+		width: 850px;
+		display: grid;
+		align-items: top;
+		display: none;
+	}
+
+	#single-player-heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		height: 150px;
+	}
+
+	#single-player-heading > h1 {
+		color: white;
+		margin: 0px;
+	}
+
+	#single-player-content {
+		height: 150px;
+		display: grid;
+		align-items: center;
+	}
+
+	#single-player-content > h1 {
+		text-align: center;
+		color: white;
+	}
+
+	.single-btn {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.single-btn > button {
+		background-color: rgba(0, 0, 0, 0.4);
+		outline: none;
+		border-radius: 0px;
+		color: white;
+		width: 100px;
+		padding: 12px 12px;
+		transition: .3s;
+	}
+
+	.single-btn > button:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	#single-player-result, #computer-won, #player-won {
+		display: none;
+	}
+
+	#computer-won > h1 {
+		color: white;
+		text-align: center;
+		font-size: 50px;
+	}
+
+	#player-won > h1 {
+		color: white;
+		text-align: center;
+		font-size: 50px;
+	}
+
+	.reset {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.reset > button {
+		outline: none;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 0px;
+		color: white;
+		padding: 12px;
+		transition: 0.3s;
+	}
+
+	.reset > button:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	#multi-player-interface {
+		height: 450px;
+		width: 850px;
+		display: none;
+	}
+
+	#multi-container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	#player1-multi, #player2-multi {
+		height: 300px;
+	}
+
+	#player2-multi {
+		display: none;
+	}
+
+	#player1-multi > h1, #multi-container > h1, #player2-multi > h1 {
+		color: white;
+		text-align: center;
+		font-size: 28px;
+	}
+
+	.options {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.options > button {
+		outline: none;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-radius: 0px;
+		color: white;
+		padding: 12px;
+		width: 90px;
+		transition: 0.3s;
+	}
+
+	.options > button:hover {
+		cursor: pointer;
+		background-color: white;
+		color: black;
+		border-color: black;
+	}
+
+	#multi-player-result, #multi-player1-result, #multi-player2-result {
+		display: none;
+	}
+
+	#multi-player1-result > h1, #multi-player2-result > h1 {
+		color: white;
+		font-size: 35px;
+	}
