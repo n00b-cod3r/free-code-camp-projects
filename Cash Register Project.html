@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang = "en-in" dir = "ltr">
+	<head>
+		<title>Cash Register Project</title>
+		<link href = "govind dev ji.jpg" rel = "icon" type = "image/ico"/>
+
+		<meta charset = "utf-8"/>
+		<meta name = "title" content = "Cash Register Project"/>
+		<meta name = "description" content = "This web app works as an cash in drawer"/>
+		<meta name = "keywords" content = "kk, ss, bb"/>
+		<meta name = "author" content = "Koustubh Sharma"/>
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<script src = "C:\Users\Koustubh Sharma\Desktop\freecodecamp.org\cashRegisterScript.js" language = "javascript" type = "text/javascript"/>
+
+			//Javascript Code Here!!!
+
+		</script>
+
+		<style type = "text/css">
+
+			body {
+				margin: 0px;
+				padding: 0px;
+				background-color: rgba(0, 0, 20, 0.8);
+			}
+			* {
+				font-family: Century Gothic;
+			}
+			.logo, .heading {
+				margin-top: 3px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.logo > h1, .heading > h1{
+				color: white;
+			}
+
+			.output {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+			}
+			.input {
+				display: grid;
+				justify-content: center;
+			}
+			.input > input {
+				margin-top: 12px;
+				padding: 12px;
+				outline: none;
+				text-align: center;
+				font-weight: bold;
+				transition: 0.2s;
+			}
+			.input > input:focus {
+				border-top-style: none;
+				border-left-style: none;
+				border-right-style: none;
+				border-color: pink;
+				border-width: 5px;
+			}
+			.button {
+				display: grid;
+				justify-content: center;
+			}
+			.button > button {
+				padding: 5px;
+				border-width: 5px;
+				border-color: rgba(60, 40, 20, 0.8);
+				width: 150px;
+				margin-top: 20px;
+				background-color: pink;
+				font-size: 20px;
+			}
+			.button > button:hover {
+				cursor: pointer;
+			}
+			.price-block {
+				height: 60px;
+				display: grid;
+				justify-content: center;
+			}
+			.price-block > p {
+				width: 150px;
+				padding: 7px;
+				text-align: center;
+				border-top-style: solid;
+				border-right-style: solid;
+				border-bottom-style: solid;
+				border-left-style: solid;
+				border-width: 8px;
+				border-color: lightblue;
+				color: white;
+			}
+			.connect {
+				height: 28px;
+				display: flex;
+				justify-content: center;
+			}
+			.connect-box {
+				width: 25px;
+				height: 40px;
+				background-color: lightblue;
+				z-index: 1;
+			}
+			.register {
+				margin-top: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				height: 250px;
+			}
+			.register-box {
+				border-radius: 10px 10px 0px 0px;
+				width: 330px;
+				height: 250px;
+				background-color: lightblue;
+				display: flex;
+			}
+			.number {
+				width: 160px;
+				height: 250px;
+				display: grid;
+				justify-content: space-around;
+				align-items: center;
+			}
+			.number > .box-container1 {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				height: 50px;
+				width: 150px;
+			}
+			.number > .box-container2 {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				height: 50px;
+				width: 150px;
+			}
+			.number > .box-container3 {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+				height: 50px;
+				width: 150px;
+			}
+			.box1, .box2, .box3, .box4{
+				border-radius: 2px;
+				background-color: rgba(0, 0, 20, 0.8);
+				color: white;
+				text-align: center;
+				height: 20px;
+				width: 20px;
+			}
+			.cash-in-register {
+				width: 185px;
+				height: 250px;
+			}
+			.display {
+				background-color: white;
+				width: 150px;
+				height: 220px;
+				margin: 13px 12px 12px 12px;
+				border-radius: 12px;
+			}
+			.burn {
+				margin-top: 10px;
+				height: 80px;
+				display: flex;
+				justify-content: center;
+			}
+			.vip-box {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 60px;
+				width: 330px;
+				background-color: lightblue;
+				border-radius: 0px 0px 10px 10px;
+			}
+			#circle {
+				border-radius: 100%;
+				height: 30px;
+				width: 30px;
+				background-color: rgba(0, 0, 20, 0.8);
+			}
+		</style>
+	</head>
+	<body>
+		<section>
+			<header>
+				<div class = "heading">
+					<h1 style = "font-weight: bolder; font-size: 30px;">Cash Register Project</h1>
+				</div>
+			</header>
+		</section>
+		<section>
+			<div class = "output" id = "change-due">
+			</div>
+			<div class = "input">
+				<label style = "color: white; margin-top: 12px;">Enter cash from customer</label>
+				<input type = "number" placeholder = "Enter Cash"  id = "cash"/>
+			</div>
+			<div class = "button">
+				<button id = "purchase-btn" onclick = "check()">Purchase</button>
+			</div>
+		</section>
+		<section>
+			<div class = "price-block">
+				<p>Price: 19.5&nbsp;$</p>
+			</div>
+			<div class = "connect">
+				<div class = "connect-box"></div>
+			</div>
+			<div class = "register">
+				<div class = "register-box">
+				<div class = "number">
+					<div class = "box-container1">
+						<div class = "box1">0</div>
+						<div class = "box2">1</div>
+						<div class = "box3">2</div>
+						<div class = "box4">3</div>
+					</div>
+					<div class = "box-container2">
+						<div class = "box1">4</div>
+						<div class = "box2">5</div>
+						<div class = "box3">6</div>
+						<div class = "box4">7</div>
+					</div>
+					<div class = "box-container3">
+						<div class = "box1">8</div>
+						<div class = "box2">9</div>
+						<div class = "box3">/</div>
+						<div class = "box4">=</div>
+					</div>
+				</div>
+				<div class = "cash-in-register">
+					<div class = "display" id = "display-output"></div>
+				</div>
+				</div>
+			</div>
+			<div class = "burn">
+				<div class = "vip-box"><kk id = "circle"></kk></div>
+			</div>
+		</section>
+	</body>
+</html>
